@@ -131,6 +131,7 @@ public class ServerThread implements Runnable {
                             }
                         }
                         else if(CRUD.equalsIgnoreCase("DELETE")) {
+                            unitID = Integer.valueOf(tokens[2]);
                             list.remove(unitID);
                             spare.offer(unitID);
                             serverMemory.remove(unitID);
